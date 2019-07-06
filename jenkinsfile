@@ -2,7 +2,7 @@
     agent any
 
 
-    stages {{
+    stages {
         stage('SCM Checkout'){
           git 'https://github.com/pratapkumarkshirsagar/maven-project.git'
         }
@@ -27,4 +27,4 @@
 }
 }
 }
-}
+
