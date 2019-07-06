@@ -16,5 +16,14 @@
                 }
             }
 }
+   {
+        stage ('Compile Test') {
+
+            steps {
+                withMaven(maven : 'EC2MAVEN') {
+                    sh 'mvn clean test'
+                }
+            }
+}
 }
 }
