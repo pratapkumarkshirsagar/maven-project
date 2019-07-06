@@ -2,7 +2,7 @@
     agent any
 
 
-    stages {
+    stages {{
         stage('SCM Checkout'){
           git 'https://github.com/pratapkumarkshirsagar/maven-project.git'
         }
@@ -17,13 +17,14 @@
             }
 }
    {
-        stage ('Compile Test') {
+        stage ('Test Stage') {
 
             steps {
                 withMaven(maven : 'EC2MAVEN') {
                     sh 'mvn clean test'
                 }
             }
+}
 }
 }
 }
