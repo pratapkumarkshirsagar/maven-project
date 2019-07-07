@@ -36,6 +36,16 @@
                 }
             }
 }
+}
+    {
+        stage ('Package Stage') {
+
+            steps {
+                withMaven(maven : 'EC2MAVEN') {
+                    sh 'mvn clean package'
+                }
+            }
+}
 }     
 }
 
