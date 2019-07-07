@@ -46,6 +46,16 @@
                 }
             }
 }
+} 
+    {
+        stage ('Verify Stage') {
+
+            steps {
+                withMaven(maven : 'EC2MAVEN') {
+                    sh 'mvn clean verify'
+                }
+            }
+}
 }     
 }
 
