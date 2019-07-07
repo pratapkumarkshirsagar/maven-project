@@ -16,14 +16,6 @@
                 }
             }
 }
-   {
-        stage ('Test Stage') {
-
-            steps {
-                withMaven(maven : 'EC2MAVEN') {
-                    sh 'mvn clean test'
-                }
-            }
 }
 }
 
