@@ -19,7 +19,7 @@
 }
     {
         stage ('Compile Stage') {
-
+        agent {label 'maven'}
             steps {
                 withMaven(maven : 'EC2MAVEN') {
                     sh 'mvn clean compile'
