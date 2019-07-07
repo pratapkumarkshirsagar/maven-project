@@ -7,6 +7,16 @@
           git 'https://github.com/pratapkumarkshirsagar/maven-project.git'
         }
   }
+     {
+        stage ('Validate Stage') {
+
+            steps {
+                withMaven(maven : 'EC2MAVEN') {
+                    sh 'mvn clean validate'
+                }
+            }
+}
+}
     {
         stage ('Compile Stage') {
 
