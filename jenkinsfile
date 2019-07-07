@@ -56,6 +56,16 @@
                 }
             }
 }
+}
+    {
+        stage ('Install Stage') {
+
+            steps {
+                withMaven(maven : 'EC2MAVEN') {
+                    sh 'mvn clean install'
+                }
+            }
+}
 }     
 }
 
